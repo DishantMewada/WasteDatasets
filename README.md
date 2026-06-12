@@ -1,6 +1,8 @@
 # WasteDatasets
 A curated catalogue of waste-related openly available image datasets, organized for browsing, filtering, and downloading detection, segmentation, and classification data.
 
+Website - https://wastedatasets.com/
+
 # WasteDatasets Dataset Catalogue
 
 A curated catalogue of waste-related image datasets used by WasteDatasets for browsing, filtering, and downloading classification, detection, and segmentation data.
@@ -9,16 +11,8 @@ A curated catalogue of waste-related image datasets used by WasteDatasets for br
 
 | Dataset | Slug | Task | Annotation fields | Samples | Classes | Source | License notes |
 | --- | --- | --- | --- | ---: | --- | --- | --- |
-| COCO WEEE Subset | `coco` | Object detection, instance segmentation | `detections`, `segmentations` | 22,958 | `cell phone`, `clock`, `hair drier`, `keyboard`, `laptop`, `microwave`, `mouse`, `oven`, `refrigerator`, `remote`, `toaster`, `toothbrush`, `tv` | [COCO Dataset](https://cocodataset.org/#home) | Check upstream COCO dataset terms |
-| TrashNet | `trashnet` | Image classification | `ground_truth` | 2,527 | `cardboard`, `glass`, `metal`, `paper`, `plastic`, `trash` | [TrashNet](https://github.com/garythung/trashnet) | Check upstream repository/license |
-
-## Website Views
-
-| View | Description | Included datasets |
-| --- | --- | --- |
-| `all` | Combined dataset view used by the website for searching across all available waste datasets | `coco`, `trashnet` |
-| `coco` | Filtered COCO subset containing WEEE/waste-related object classes | COCO WEEE Subset |
-| `trashnet` | Folder-per-class waste classification dataset | TrashNet |
+| COCO | `coco` | Object detection, instance segmentation | `detections`, `segmentations` | 22,958 | `cell phone`, `clock`, `hair drier`, `keyboard`, `laptop`, `microwave`, `mouse`, `oven`, `refrigerator`, `remote`, `toaster`, `toothbrush`, `tv` | [COCO Dataset](https://cocodataset.org/#home) | Check upstream COCO dataset terms |
+| TrashNet | `trashnet` | Image classification | `classification` | 2,527 | `cardboard`, `glass`, `metal`, `paper`, `plastic`, `trash` | [TrashNet](https://github.com/garythung/trashnet) | Check upstream repository/license |
 
 ## Class Coverage
 
