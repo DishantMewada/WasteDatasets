@@ -9,10 +9,10 @@ A curated catalogue of waste-related image datasets used by WasteDatasets for br
 
 ## Dataset Summary
 
-| Dataset | Slug | Task | Annotation fields | Samples | Classes | Source | License notes |
-| --- | --- | --- | --- | ---: | --- | --- | --- |
-| COCO | `coco` | Object detection, instance segmentation | `detections`, `segmentations` | 22,958 | `cell phone`, `clock`, `hair drier`, `keyboard`, `laptop`, `microwave`, `mouse`, `oven`, `refrigerator`, `remote`, `toaster`, `toothbrush`, `tv` | [COCO Dataset](https://cocodataset.org/#home) | Check upstream COCO dataset terms |
-| TrashNet | `trashnet` | Image classification | `classification` | 2,527 | `cardboard`, `glass`, `metal`, `paper`, `plastic`, `trash` | [TrashNet](https://github.com/garythung/trashnet) | Check upstream repository/license |
+| Dataset | Slug | Task | Annotation fields | Samples | Classes | Source |
+| --- | --- | --- | --- | ---: | --- | --- |
+| COCO | `coco` | Object detection, instance segmentation | `detections`, `segmentations` | 22,958 | `cell phone`, `clock`, `hair drier`, `keyboard`, `laptop`, `microwave`, `mouse`, `oven`, `refrigerator`, `remote`, `toaster`, `toothbrush`, `tv` | [COCO Dataset](https://cocodataset.org/#home) |
+| TrashNet | `trashnet` | Image classification | `classification` | 2,527 | `cardboard`, `glass`, `metal`, `paper`, `plastic`, `trash` | [TrashNet](https://github.com/garythung/trashnet) |
 
 ## Class Coverage
 
