@@ -34,35 +34,88 @@ Website - https://wastedatasets.com/
 | `trash` | TrashNet | Classification |
 | `tv` | COCO | Detection, segmentation |
 
-## Catalogue Format
+## Downloaded File Structure
 
-Each dataset is represented by a folder containing a `manifest.json` file. The folder name is used as the dataset slug in the website.
+Downloads from the WasteDatasets website are exported as ZIP files. A ZIP contains the selected images, or the current filtered view if no samples are selected. When labels are filtered on the website, the downloaded annotations are filtered to the same selected labels.
 
 ```text
-datasets/
+download.zip
   coco/
-    manifest.json
-    data/
-    labels.json
+    cell_phone/
+      image_001.jpg
+    tv/
+      image_002.jpg
   trashnet/
-    manifest.json
-    data/
+    cardboard/
+      cardboard1.jpg
+    plastic/
+      plastic1.jpg
+
+  annotations/
+    README.txt
+    fiftyone_samples.json
+    coco_instances.json
+    classifications.csv
+    per_image/
+      coco/
+        cell_phone/
+          image_001.jpg.json
+      trashnet/
+        cardboard/
+          cardboard1.jpg.json
+
+  download_manifest.txt
 ```
 
-Example manifest:
+| Path | Present when | Description | Common use |
+| --- | --- | --- | --- |
+| `<source>/<label>/<image>` | Always | Downloaded media files grouped by dataset/source and label | Direct image training or manual inspection |
+| `annotations/fiftyone_samples.json` | Always | Full FiftyOne sample records for every downloaded image | Re-import into FiftyOne or preserve complete metadata |
+| `annotations/per_image/...json` | Always | One JSON sidecar for each image, matching the image folder path | Easy per-image lookup without parsing one large file |
+| `annotations/coco_instances.json` | Detection/segmentation labels are present | COCO-style `images`, `annotations`, and `categories` with boxes and masks where available | Train/evaluate detection or segmentation models with COCO-compatible tooling |
+| `annotations/classifications.csv` | Classification labels are present | CSV rows containing image path, source dataset, label field, and class label | Train/evaluate classification models or load into pandas |
+| `annotations/README.txt` | Always | Short explanation of the ZIP contents | Quick reference after download |
+| `download_manifest.txt` | Always | Download metadata such as sample count and export time | Reproducibility and bookkeeping |
 
-```json
-{
-  "slug": "dataset_slug",
-  "name": "Dataset Name",
-  "type": "classification_dir",
-  "dataset_dir": "data",
-  "task": "image classification",
-  "classes": ["class_a", "class_b"],
-  "source_url": "https://example.com/dataset",
-  "license": "check upstream dataset terms",
-  "description": "Short dataset description."
-}
+## How To Use Downloads
+
+### Classification
+
+For classification datasets such as TrashNet, use `annotations/classifications.csv` as the label file and load images from the `media_path` column.
+
+```python
+import pandas as pd
+
+labels = pd.read_csv("annotations/classifications.csv")
+print(labels[["media_path", "label"]].head())
+```
+
+Each `media_path` points to an image inside the ZIP, for example:
+
+```text
+trashnet/cardboard/cardboard1.jpg
+```
+
+### Detection And Segmentation
+
+For COCO-style detection or segmentation data, use:
+
+```text
+annotations/coco_instances.json
+```
+
+This file follows the standard COCO structure:
+
+```text
+images[]       image records and file paths
+annotations[]  bounding boxes and segmentation masks where available
+categories[]   class names and category IDs
+```
+
+The `file_name` field in each COCO image record points to the downloaded image path inside the ZIP, for example:
+
+```text
+coco/tv/000000123456.jpg
 ```
 
 ## Notes
