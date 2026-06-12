@@ -1,11 +1,7 @@
-# WasteDatasets
+# WasteDatasets Dataset Catalogue
 A curated catalogue of waste-related openly available image datasets, organized for browsing, filtering, and downloading detection, segmentation, and classification data.
 
 Website - https://wastedatasets.com/
-
-# WasteDatasets Dataset Catalogue
-
-A curated catalogue of waste-related image datasets used by WasteDatasets for browsing, filtering, and downloading classification, detection, and segmentation data.
 
 ## Dataset Summary
 
