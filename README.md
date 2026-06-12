@@ -13,25 +13,25 @@ Website - https://wastedatasets.com/
 
 ## Website Label Groups
 
-The website shows these simpler group names in the left label panel. Selecting a group selects all listed source classes by default; the individual source classes are then shown below the search box and can be deselected before viewing or downloading.
+The website shows these simpler group names in the left label panel. Selecting a group selects all listed source classes by default; the individual source classes are then shown below the search box and can be deselected before viewing or downloading. Source class names are written with their dataset prefix so it is clear where each label comes from.
 
-| Website group | Source classes |
+| Website group | Source dataset classes |
 | --- | --- |
-| `plastic bottle` | `Clear plastic bottle`, `Other plastic bottle` |
-| `plastic cap/lid` | `Plastic bottle cap`, `Plastic lid` |
-| `metal cap/lid` | `Metal bottle cap`, `Metal lid`, `Pop tab` |
-| `metal` | `Aluminium foil`, `Food Can`, `Aerosol`, `Drink can`, `Scrap metal`, TrashNet `metal` |
-| `blister pack` | `Aluminium blister pack`, `Carded blister pack` |
-| `glass` | `Glass bottle`, `Glass cup`, `Glass jar`, `Broken glass`, TrashNet `glass` |
-| `paper` | `Normal paper`, `Magazine paper`, `Wrapping paper`, `Tissues`, `Paper bag`, `Paper straw`, TrashNet `paper` |
-| `cardboard/carton` | `Other carton`, `Egg carton`, `Drink carton`, `Corrugated carton`, `Meal carton`, `Pizza box`, `Toilet tube`, TrashNet `cardboard` |
-| `cup` | `Paper cup`, `Disposable plastic cup`, `Foam cup`, `Glass cup`, `Other plastic cup` |
-| `plastic bag/wrapper` | `Plastic film`, `Six pack rings`, `Garbage bag`, `Other plastic wrapper`, `Single-use carrier bag`, `Polypropylene bag`, `Crisp packet`, `Plastified paper bag` |
-| `food container` | `Spread tub`, `Tupperware`, `Disposable food container`, `Foam food container`, `Other plastic container` |
-| `small plastic item` | `Other plastic`, `Plastic glooves`, `Plastic utensils`, `Squeezable tube`, `Plastic straw`, `Styrofoam piece`, TrashNet `plastic` |
-| `organic/food waste` | `Food waste` |
-| `e-waste` | `tv`, `laptop`, `mouse`, `remote`, `keyboard`, `cell phone`, `microwave`, `oven`, `toaster`, `refrigerator`, `clock`, `hair drier`, `toothbrush` |
-| `other` | `Battery`, `Rope & strings`, `Shoe`, `Cigarette`, `Unlabeled litter`, TrashNet `trash` |
+| `plastic bottle` | TACO: `Clear plastic bottle`, `Other plastic bottle` |
+| `plastic cap/lid` | TACO: `Plastic bottle cap`, `Plastic lid` |
+| `metal cap/lid` | TACO: `Metal bottle cap`, `Metal lid`, `Pop tab` |
+| `metal` | TACO: `Aluminium foil`, `Food Can`, `Aerosol`, `Drink can`, `Scrap metal`; TrashNet: `metal` |
+| `blister pack` | TACO: `Aluminium blister pack`, `Carded blister pack` |
+| `glass` | TACO: `Glass bottle`, `Glass cup`, `Glass jar`, `Broken glass`; TrashNet: `glass` |
+| `paper` | TACO: `Normal paper`, `Magazine paper`, `Wrapping paper`, `Tissues`, `Paper bag`, `Paper straw`; TrashNet: `paper` |
+| `cardboard/carton` | TACO: `Other carton`, `Egg carton`, `Drink carton`, `Corrugated carton`, `Meal carton`, `Pizza box`, `Toilet tube`; TrashNet: `cardboard` |
+| `cup` | TACO: `Paper cup`, `Disposable plastic cup`, `Foam cup`, `Glass cup`, `Other plastic cup` |
+| `plastic bag/wrapper` | TACO: `Plastic film`, `Six pack rings`, `Garbage bag`, `Other plastic wrapper`, `Single-use carrier bag`, `Polypropylene bag`, `Crisp packet`, `Plastified paper bag` |
+| `food container` | TACO: `Spread tub`, `Tupperware`, `Disposable food container`, `Foam food container`, `Other plastic container` |
+| `small plastic item` | TACO: `Other plastic`, `Plastic glooves`, `Plastic utensils`, `Squeezable tube`, `Plastic straw`, `Styrofoam piece`; TrashNet: `plastic` |
+| `organic/food waste` | TACO: `Food waste` |
+| `e-waste` | COCO: `tv`, `laptop`, `mouse`, `remote`, `keyboard`, `cell phone`, `microwave`, `oven`, `toaster`, `refrigerator`, `clock`, `hair drier`, `toothbrush` |
+| `other` | TACO: `Battery`, `Rope & strings`, `Shoe`, `Cigarette`, `Unlabeled litter`; TrashNet: `trash` |
 
 ## Class Coverage
 
